@@ -1,0 +1,39 @@
+<editor>
+    <help>https://docs.cloudbees.com/docs/cloudbees-cd/latest/plugins/ec-apache#RunApache</help>
+    <formElement>
+        <type>entry</type>
+        <label>Path to httpd:</label>
+        <value></value>
+        <property>Path2Apache2</property>
+        <required>1</required>
+        <documentation>Path to the httpd utility. i.e: 'C:\Program Files (x86)\Apache Software Foundation\Apache2.2\bin'.</documentation>
+    </formElement>
+    <formElement>
+        <type>entry</type>
+        <label>URL:</label>
+        <value></value>
+        <property>ListenURL</property>
+        <required>1</required>
+        <documentation>Url used by Apache to check the status of the server after run the command to start, stop or restart the apache http server. Must include protocol, host and port. i.e: 'http://localhost:80'.</documentation>
+    </formElement>
+    <formElement>
+        <type>select</type>
+        <label>Action:</label>
+        <property>Action</property>
+        <required>1</required>
+        <documentation>Action to perform. Available options are: start, stop, restart.</documentation>
+        <option><name>Start</name><value>start</value></option>
+        <option><name>Stop</name><value>stop</value></option>
+        <option><name>Restart</name><value>restart</value></option>
+    </formElement>
+    <formElement>
+        <type>checkbox</type>
+        <label>Debug:</label>
+        <property>debug</property>
+        <checkedValue>1</checkedValue>
+        <uncheckedValue>0</uncheckedValue>
+        <required>0</required>
+        <value>0</value>
+        <documentation>Enable debug mode.</documentation>
+    </formElement>
+</editor>

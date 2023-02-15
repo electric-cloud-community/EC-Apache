@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+    <key>@PLUGIN_KEY@</key>
+    <version>@PLUGIN_VERSION@</version>
+    <label>@PLUGIN_KEY@</label>
+    <description>Apache Application Server integration</description>
+    <author>Electric Cloud</author>
+    <category>Application Server</category>
+    <authorUrl>http://www.electric-cloud.com/support</authorUrl>
+    <commander-version min="3.6"/>
+    <help>EC-Apache_help.xml</help>
+    <components>
+        <component name="configure">
+            <javascript>war/com.electriccloud.commander.plugins.EC_Apache.configure/com.electriccloud.commander.plugins.EC_Apache.configure.nocache.js</javascript>
+        </component>
+    </components>
+    <hasAdoc>true</hasAdoc>
+    <catalogLabel>Apache HTTP Server Project</catalogLabel>
+    <detailedDescription>The Apache HTTP Server Project is a collaborative software development effort aimed at creating a robust, commercial-grade, featureful, and freely-available source code implementation of an HTTP (Web) server. The project is jointly managed by a group of volunteers located around the world, using the Internet and the Web to communicate, plan, and develop the server and its related documentation. The Apache HTTP Server Project is an effort to develop and maintain an open-source HTTP server for modern operating systems including UNIX and Windows NT. The goal of this project is to provide a secure, efficient and extensible server that provides HTTP services in sync with the current HTTP standards.</detailedDescription>
+</plugin>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exportedData version="39" buildLabel="" buildVersion="3.5.0.0">
+    <exportPath>/projects/@PLUGIN_KEY@-@PLUGIN_VERSION@</exportPath>
+    <project>
+        <projectName>@PLUGIN_KEY@-@PLUGIN_VERSION@</projectName>
+        <propertySheet>
+            <!-- Improvement for ECPAPPSERVERAPACHE-14 -->
+            <property>
+                <propertyName>ec_icon</propertyName>
+                <value>images/icon-plugin.svg</value>
+            </property>
+            <!-- End of improvement for ECPAPPSERVERAPACHE-14 -->
+            <property>
+                <propertyName>ec_setup</propertyName>
+                <value></value>
+                <expandable>0</expandable>
+            </property>
+            <property>
+                <propertyName>postp_matchers</propertyName>
+                <value></value>
+                <expandable>0</expandable>
+            </property>
+            <property>
+                <propertyName>ec_visibility</propertyName>
+                <description></description>
+                <expandable>1</expandable>
+                <value>pickListOnly</value>
+            </property>
+        </propertySheet>
+        <procedure>
+            <procedureName>RunApache</procedureName>
+            <description>The RunApache procedure will try to start/stop an Apache server with the apache2 utility.</description>
+            <jobNameTemplate>apache-run-$[jobId]</jobNameTemplate>
+            <resourceName></resourceName>
+            <workspaceName></workspaceName>
+            <projectName>@PLUGIN_KEY@-@PLUGIN_VERSION@</projectName>
+            <propertySheet>
+				<property>
+						<propertyName>ec_parameterForm</propertyName>    
+						<expandable>1</expandable>
+						<value></value>
+				</property>
+                <property>                    <propertyName>ec_customEditorData</propertyName>                    <propertySheet>                        <property>                            <propertyName>parameters</propertyName>                            <propertySheet>                                <property>                                    <propertyName>Path2Apache2</propertyName>                                    <propertySheet>                                        <property>                                            <propertyName>formType</propertyName>                                            <expandable>1</expandable>                                            <value>standard</value>                                        </property>                                    </propertySheet>                                </property>
+                                <property>
+                                    <propertyName>ListenURL</propertyName>
+                                    <propertySheet>
+                                        <property>
+                                            <propertyName>formType</propertyName>
+                                            <expandable>1</expandable>
+                                            <value>standard</value>
+                                        </property>
+                                    </propertySheet>
+                                </property>
+                                <property>
+                                    <propertyName>Action</propertyName>
+                                    <propertySheet>
+                                        <property>
+                                            <propertyName>options</propertyName>
+                                            <propertySheet>
+                                                <property>
+                                                    <propertyName>option1</propertyName>
+                                                    <propertySheet>
+                                                        <property>
+                                                            <propertyName>text</propertyName>
+                                                            <expandable>1</expandable>
+                                                            <value>Start</value>
+                                                        </property>
+                                                        <property>
+                                                            <propertyName>value</propertyName>
+                                                            <expandable>1</expandable>
+                                                            <value>start</value>
+                                                        </property>
+                                                    </propertySheet>
+                                                </property>
+                                                <property>
+                                                    <propertyName>option2</propertyName>
+                                                    <propertySheet>
+                                                        <property>
+                                                            <propertyName>text</propertyName>
+                                                            <expandable>1</expandable>
+                                                            <value>Stop</value>
+                                                        </property>
+                                                        <property>
+                                                            <propertyName>value</propertyName>
+                                                            <expandable>1</expandable>
+                                                            <value>stop</value>
+                                                        </property>
+                                                    </propertySheet>
+                                                </property>
+                                                <property>
+                                                    <propertyName>option3</propertyName>
+                                                    <propertySheet>
+                                                        <property>
+                                                            <propertyName>text</propertyName>
+                                                            <expandable>1</expandable>
+                                                            <value>Restart</value>
+                                                        </property>
+                                                        <property>
+                                                            <propertyName>value</propertyName>
+                                                            <expandable>1</expandable>
+                                                            <value>restart</value>
+                                                        </property>
+                                                    </propertySheet>
+                                                </property>
+                                                <property>
+                                                    <propertyName>optionCount</propertyName>
+                                                    <expandable>1</expandable>
+                                                    <value>3</value>
+                                                </property>
+                                                <property>
+                                                    <propertyName>type</propertyName>
+                                                    <expandable>1</expandable>
+                                                    <value>list</value>
+                                                </property>
+                                            </propertySheet>
+                                        </property>
+                                        <property>
+                                            <propertyName>formType</propertyName>
+                                            <expandable>1</expandable>
+                                            <value>standard</value>
+                                        </property>
+                                    </propertySheet>
+                                </property>
+                                <property>
+                                    <propertyName>debug</propertyName>
+                                    <propertySheet>
+                                        <property>
+                                            <propertyName>formType</propertyName>
+                                            <expandable>1</expandable>
+                                            <value>standard</value>
+                                        </property>
+                                    </propertySheet>
+                                </property>
+                            </propertySheet>
+                        </property>
+                    </propertySheet>
+                </property>
+            </propertySheet>            <formalParameter>                <formalParameterName>Path2Apache2</formalParameterName>                <defaultValue>Apache</defaultValue>                <description>Path to the httpd utility. (Required)</description>                <required>1</required>                <type>entry</type>            </formalParameter>
+            <formalParameter>
+                <formalParameterName>ListenURL</formalParameterName>
+                <defaultValue></defaultValue>
+                <description>Url used by Apache. Must include protocol, host and port. (Required)</description>
+                <required>1</required>
+                <type>entry</type>
+            </formalParameter>
+            <formalParameter>
+                <formalParameterName>Action</formalParameterName>
+                <defaultValue></defaultValue>
+                <description>Action to perform. Available options are: start, stop, restart. (Required)</description>
+                <required>1</required>
+                <type>select</type>
+            </formalParameter>
+            <formalParameter>
+                <formalParameterName>debug</formalParameterName>
+                <defaultValue></defaultValue>
+                <description>Enable debug mode.</description>
+                <required>0</required>
+                <type>checkbox</type>
+            </formalParameter>
+            <step>
+                <stepName>RunApache</stepName>
+                <alwaysRun>0</alwaysRun>
+                <broadcast>0</broadcast>
+                <command/>
+                <condition></condition>
+                <description></description>
+                <errorHandling>failProcedure</errorHandling>
+                <exclusive>0</exclusive>
+                <logFileName></logFileName>
+                <parallel>0</parallel>
+                <postProcessor>postp --loadProperty /myProject/postp_matchers</postProcessor>
+                <releaseExclusive>0</releaseExclusive>
+                <resourceName></resourceName>
+                <retries>0</retries>
+                <shell>ec-perl</shell>
+                <timeLimit></timeLimit>
+                <timeLimitUnits>minutes</timeLimitUnits>
+                <workingDirectory></workingDirectory>
+                <workspaceName></workspaceName>
+                <procedureName>RunApache</procedureName>
+                <projectName>EC-Apache</projectName>
+                <propertySheet>
+                    <property>
+                        <propertyName>ec_customEditorData</propertyName>
+                        <propertySheet>
+                            <property>
+                                <propertyName>formType</propertyName>
+                                <expandable>1</expandable>
+                                <value>command</value>
+                            </property>
+                        </propertySheet>
+                    </property>
+                </propertySheet>
+            </step>
+        </procedure>
+    </project>
+</exportedData>
