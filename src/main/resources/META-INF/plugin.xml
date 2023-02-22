@@ -14,7 +14,7 @@
             <javascript>war/com.electriccloud.commander.plugins.EC_Apache.configure/com.electriccloud.commander.plugins.EC_Apache.configure.nocache.js</javascript>
         </component>
     </components>
-    <hasAdoc>true</hasAdoc>
+    <repositoryUrl>https://github.com/electric-cloud-community/EC-Apache/</repositoryUrl>
     <catalogLabel>Apache HTTP Server Project</catalogLabel>
     <detailedDescription>The Apache HTTP Server Project is a collaborative software development effort aimed at creating a robust, commercial-grade, featureful, and freely-available source code implementation of an HTTP (Web) server. The project is jointly managed by a group of volunteers located around the world, using the Internet and the Web to communicate, plan, and develop the server and its related documentation. The Apache HTTP Server Project is an effort to develop and maintain an open-source HTTP server for modern operating systems including UNIX and Windows NT. The goal of this project is to provide a secure, efficient and extensible server that provides HTTP services in sync with the current HTTP standards.</detailedDescription>
 </plugin>
